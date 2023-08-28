@@ -6,15 +6,11 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>american-flights-api</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>mule-application</packaging>
 
-	<!-- <parent>
-		<groupId>com.mycompany</groupId>
-		<artifactId>parent-pom</artifactId>
-		<version>1.0.20</version>
-		<relativePath />
-	</parent> -->
+	<!-- <parent> <groupId>com.mycompany</groupId> <artifactId>parent-pom</artifactId> 
+		<version>1.0.20</version> <relativePath /> </parent> -->
 
 	<name>american-flights-api</name>
 
@@ -199,12 +195,22 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<!-- <repository>
+		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Releases Repository</name>
 			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
-			<layout>default</layout>
-		</repository> -->
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -218,4 +224,15 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
+		</repository>
+	</distributionManagement>
 </project>
