@@ -28,6 +28,7 @@
 		<cloudhub.environment.sandbox>Sandbox</cloudhub.environment.sandbox>
 		<cloudhub.environment.desing>Design</cloudhub.environment.desing>
 		<cloudhub.mule.version>4.4.0</cloudhub.mule.version>
+		<munit.version>2.3.0</munit.version>
 
 		<!-- Anypoint properties. -->
 		<cloudhub.properties.anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</cloudhub.properties.anypoint.platform.analytics_base_uri>
@@ -65,6 +66,33 @@
 							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
 						</properties>
 					</cloudHubDeployment>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<failBuild>false</failBuild>
+						<requiredApplicationCoverage>0</requiredApplicationCoverage>
+						<requiredResourceCoverage>0</requiredResourceCoverage>
+						<requiredFlowCoverage>0</requiredFlowCoverage>
+						<formats>
+							<format>console</format>
+							<format>html</format>
+						</formats>
+					</coverage>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -180,6 +208,21 @@
 			<version>1.5.6</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<repositories>
@@ -195,22 +238,11 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<!-- <repository>
-			<id>nexus-releases</id>
-			<name>Nexus Releases Repository</name>
-			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>nexus-snapshots</id>
-			<name>Nexus Snapshot Repository</name>
-			<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository> -->
+		<!-- <repository> <id>nexus-releases</id> <name>Nexus Releases Repository</name> 
+			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url> <releases> 
+			<enabled>true</enabled> </releases> </repository> <repository> <id>nexus-snapshots</id> 
+			<name>Nexus Snapshot Repository</name> <url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url> 
+			<snapshots> <enabled>true</enabled> </snapshots> </repository> -->
 	</repositories>
 
 	<pluginRepositories>
@@ -225,14 +257,8 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<!-- <distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
-		</repository>
-	</distributionManagement> -->
+	<!-- <distributionManagement> <snapshotRepository> <id>nexus-snapshots</id> 
+		<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url> </snapshotRepository> 
+		<repository> <id>nexus-releases</id> <url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url> 
+		</repository> </distributionManagement> -->
 </project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="american-flights-api-test-suite.xml" />
+	<munit:test name="american-flights-api-test-suite-post:\flights:application\json:american-flights-api-configTest" doc:id="c1c59cf2-18af-4f1e-9b9b-cb4e552b18c7" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\flights:application\json:american-flights-api-config" doc:id="4fa0685f-a8d2-4c54-964f-79d5be66381d" name="post:\flights:application\json:american-flights-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<logger level="INFO" doc:name="info log" doc:id="93c6e57e-a268-493c-b388-5d6d229582ca" message="#[payload]"/>
+			<munit-tools:assert doc:name="payload not null" doc:id="94d0c97f-f15b-4a2d-9b2b-f9465adc658c" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
