@@ -9,12 +9,12 @@
 	<version>1.0.6</version>
 	<packaging>mule-application</packaging>
 
-	<parent>
+	<!-- <parent>
 		<groupId>com.mycompany</groupId>
 		<artifactId>parent-pom</artifactId>
 		<version>1.0.20</version>
 		<relativePath />
-	</parent>
+	</parent> -->
 
 	<name>american-flights-api</name>
 
