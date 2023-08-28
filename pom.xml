@@ -147,7 +147,7 @@
 								<workerType>MICRO</workerType>
 								<objectStoreV2>true</objectStoreV2>
 								<properties>
-									<http.port>8081</http.port>
+									<http.port>8082</http.port>
 									<env>Design</env>
 									<api.id>18908626</api.id>
 								</properties>
