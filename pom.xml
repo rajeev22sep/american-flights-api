@@ -195,7 +195,7 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
+		<!-- <repository>
 			<id>nexus-releases</id>
 			<name>Nexus Releases Repository</name>
 			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
@@ -210,7 +210,7 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
+		</repository> -->
 	</repositories>
 
 	<pluginRepositories>
@@ -225,7 +225,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<distributionManagement>
+	<!-- <distributionManagement>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<url>http://desktop-66i8l1j:8096/repository/nexus-snapshots/</url>
@@ -234,5 +234,5 @@
 			<id>nexus-releases</id>
 			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
 		</repository>
-	</distributionManagement>
+	</distributionManagement> -->
 </project>
