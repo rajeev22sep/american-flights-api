@@ -247,6 +247,7 @@ output application/json
 ]]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<logger level="INFO" doc:name="info logger" doc:id="0223ba47-22b9-4102-a437-27d3475f87f2" message="#[payload]"/>
 	</flow>
 	<flow name="get:\flights\(ID):american-flights-api-config">
 		<ee:transform
