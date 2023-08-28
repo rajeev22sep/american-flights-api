@@ -199,12 +199,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
+		<!-- <repository>
 			<id>nexus-releases</id>
 			<name>Nexus Releases Repository</name>
 			<url>http://desktop-66i8l1j:8096/repository/nexus-releases/</url>
 			<layout>default</layout>
-		</repository>
+		</repository> -->
 	</repositories>
 
 	<pluginRepositories>
