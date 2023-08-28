@@ -23,11 +23,6 @@ pipeline {
 			}
 		}
 
-		stage('Deploy Design') {
-			
-			steps {
-				bat 'mvn -U -V -e -B  -DskipTests deploy -Pch-design -DmuleDeploy'
-			}
-		}
+		
 	}
 }
