@@ -37,6 +37,9 @@
 		<cloudhub.properties.anypoint.platform.uri>https://anypoint.mulesoft.com</cloudhub.properties.anypoint.platform.uri>
 
 		<anypoint.org.id>37cf89b7-e08b-4879-bf65-6d7b5df78dea</anypoint.org.id>
+		
+		<sonar.language>mule</sonar.language>
+		<sonar.sources>src/main/mule</sonar.sources>
 
 	</properties>
 
