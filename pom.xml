@@ -21,8 +21,8 @@
 		<app.runtime>4.4.0-20211026</app.runtime>
 		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 		<cloudhub.applicationName>${project.artifactId}</cloudhub.applicationName>
-		<cloudhub.username>RajeevRanjan_AUG2023</cloudhub.username>
-		<cloudhub.password>Rajeev@22sep</cloudhub.password>
+		<!-- <cloudhub.username>RajeevRanjan_AUG2023</cloudhub.username>
+		<cloudhub.password>Rajeev@22sep</cloudhub.password> -->
 		<cloudhub.target>onprem-windows</cloudhub.target>
 		<cloudhub.targetType>server</cloudhub.targetType>
 		<cloudhub.environment.sandbox>Sandbox</cloudhub.environment.sandbox>
@@ -35,6 +35,9 @@
 		<cloudhub.properties.anypoint.platform.coreservice_base_uri>https://anypoint.mulesoft.com/accounts</cloudhub.properties.anypoint.platform.coreservice_base_uri>
 		<cloudhub.properties.anypoint.platform.platform_base_uri>https://anypoint.mulesoft.com/apiplatform</cloudhub.properties.anypoint.platform.platform_base_uri>
 		<cloudhub.properties.anypoint.platform.uri>https://anypoint.mulesoft.com</cloudhub.properties.anypoint.platform.uri>
+		
+		<anypoint.platform.client_id>d7c48fd5b7374419bce35cac5567bd34</anypoint.platform.client_id>
+		<anypoint.platform.client_secret>F7c7e67f1D934681871BdbfbF035F8b2</anypoint.platform.client_secret>
 
 		<anypoint.org.id>37cf89b7-e08b-4879-bf65-6d7b5df78dea</anypoint.org.id>
 		
@@ -59,12 +62,12 @@
 					<cloudHubDeployment>
 						<uri>${cloudhub.properties.anypoint.platform.uri}</uri>
 						<muleVersion>${cloudhub.mule.version}</muleVersion>
-						<username>${cloudhub.username}</username>
+						<username>${cloudhub.userName}</username>
 						<password>${cloudhub.password}</password>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
-							<anypoint.platform.client_id>d7c48fd5b7374419bce35cac5567bd34</anypoint.platform.client_id>
-							<anypoint.platform.client_secret>F7c7e67f1D934681871BdbfbF035F8b2</anypoint.platform.client_secret>
+							<anypoint.platform.client_id>${sandbox.clientId}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${sandbox.clientSecret}</anypoint.platform.client_secret>
 							<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
 							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
 						</properties>
